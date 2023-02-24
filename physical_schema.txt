@@ -1,17 +1,17 @@
 departments
 -
-dept_no INT PK
+dept_no VARCHAR(4) PK
 dept_name VARCHAR(255)
 
 
 dept_emp
 -
 emp_no INT PK FK - employees.emp_no
-dept_no INT FK >- departments.dept_no
+dept_no VARCHAR(4) FK >- departments.dept_no
 
 dept_manager
 -
-dept_no INT FK >- departments.dept_no
+dept_no VARCHAR(4) FK >- departments.dept_no
 emp_no INT PK FK - employees.emp_no
 
 employees
@@ -31,5 +31,5 @@ salary FLOAT
 
 titles
 -
-title_id INT PK
+title_id VARCHAR(255) PK
 title VARCHAR(255)
