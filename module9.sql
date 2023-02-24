@@ -80,7 +80,7 @@ USING (emp_no);
 --List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
 SELECT first_name as "First Name", last_name as "Last Name", sex as "Sex"
 FROM employees
-WHERE first_name = 'Hercules' AND last_name LIKE 'B%'
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
 
 --List each employee in the Sales department, including their employee number, last name, and first name.
 SELECT employees.emp_no as "Employee Number", employees.last_name as "Last Name", employees.first_name as "First Name"
@@ -89,7 +89,7 @@ JOIN dept_emp
 USING (emp_no)
 JOIN departments
 USING (dept_no)
-WHERE departments.dept_name = 'Sales'
+WHERE departments.dept_name = 'Sales';
 
 --List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
 SELECT employees.emp_no as "Employee Number", employees.last_name as "Last Name", employees.first_name as "First Name", departments.dept_name as "Department Name"
@@ -98,7 +98,7 @@ JOIN dept_emp
 USING (emp_no)
 JOIN departments
 USING (dept_no)
-WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development'
+WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development';
 
 
 
@@ -107,3 +107,4 @@ WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development'
 SELECT last_name, COUNT(*)
 FROM employees
 GROUP BY last_name
+ORDER BY COUNT(*) DESC;
