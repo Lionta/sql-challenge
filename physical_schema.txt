@@ -17,7 +17,7 @@ emp_no INT PK FK - employees.emp_no
 employees
 -
 emp_no INT PK
-emp_title VARCHAR(255)
+emp_title VARCHAR(255) FK >- titles.title_id
 birth_date VARCHAR(255)
 first_name VARCHAR(255)
 last_name VARCHAR(255)
