@@ -6,13 +6,13 @@ dept_name VARCHAR(255)
 
 dept_emp
 -
-emp_no INT FK - employees.emp_no
+emp_no INT PK FK - employees.emp_no
 dept_no INT FK >- departments.dept_no
 
 dept_manager
 -
 dept_no INT FK >- departments.dept_no
-emp_no INT FK - employees.emp_no
+emp_no INT PK FK - employees.emp_no
 
 employees
 -
@@ -26,7 +26,7 @@ hire_date VARCHAR(255)
 
 salaries
 -
-emp_no INT FK - employees.emp_no
+emp_no INT PK FK - employees.emp_no
 salary FLOAT
 
 titles
